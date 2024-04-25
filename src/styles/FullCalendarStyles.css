@@ -1,0 +1,49 @@
+.fc-day-today {
+  background-color: #e6f0f0 !important;
+}
+
+.fc-button {
+  background-color: #1f4444 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 4px !important;
+  padding: 6px 12px !important;
+  margin-right: 5px !important;
+  font-size: 14px !important;
+}
+
+.fc-button:hover {
+  background-color: #1a3838 !important;
+}
+
+.fc-button:active,
+.fc-button:focus {
+  background-color: #0f2929 !important;
+  box-shadow: none !important;
+}
+
+/* Usuwanie odstępu dla ostatniego przycisku */
+.fc-button:last-child {
+  margin-right: 0 !important;
+}
+
+/* Dodane style dla mniejszych ekranów */
+@media screen and (max-width: 480px) {
+  .fc-button {
+    padding: 2px 6px !important; /* Jeszcze mniejszy padding */
+    font-size: 10px !important; /* Jeszcze mniejszy rozmiar czcionki */
+    margin-right: 2px !important; /* Zmniejszenie marginesu między przyciskami */
+  }
+
+  /* Dodane style dla grup przycisków */
+  .fc-button-group {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  .fc-button-group .fc-button {
+    flex: 1 1 auto !important;
+    margin-bottom: 5px !important;
+  }
+}

@@ -1,0 +1,193 @@
+.showpdf-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #e6f0f0;
+  min-height: 100vh;
+  margin-left: 250px;
+}
+
+.showpdf-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  display: block;
+  padding: 20px;
+  margin-left: 250px;
+}
+
+.showpdf-content {
+  transition: filter 0.3s ease;
+  padding: 20px;
+  
+}
+
+.showpdf-content.blurred {
+  filter: blur(5px);
+}
+
+.showpdf-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background-color: rgba(230, 240, 240, 0.8);
+}
+
+.showpdf-loading-progress {
+  font-size: 24px;
+  color: #1f4444;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .showpdf-header {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .showpdf-header h2 {
+    margin-bottom: 10px;
+  }
+  .showpdf-container {
+    margin-left: 0;
+  }
+}
+
+.showpdf-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #1f4444;
+  display: flex;
+  padding: 0;
+}
+
+.showpdf-sort-button {
+  padding: 10px 20px;
+  background-color: #1f4444;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.showpdf-pdf-list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.showpdf-pdf-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.showpdf-pdf-list li button {
+  padding: 10px 20px;
+  background-color: #1f4444;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.showpdf-pdf-list li button:last-child {
+  background-color: #ff6b6b;
+}
+
+.showpdf-pdf-preview {
+  margin-top: 20px;
+}
+
+.showpdf-pdf-preview iframe {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 600px;
+}
+
+.showpdf-pdf-preview button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #1f4444;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.showpdf-error-message {
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.showpdf-hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  transition: position 0.3s ease-in-out;
+}
+
+.showpdf-hamburger-btn.open {
+  position: fixed;
+}
+
+.showpdf-hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #1f4444;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.showpdf-hamburger-line.open {
+  background-color: #fff;
+}
+
+.showpdf-hamburger-btn.open .showpdf-hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.showpdf-hamburger-btn.open .showpdf-hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.showpdf-hamburger-btn.open .showpdf-hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (min-width: 769px) {
+  .showpdf-hamburger-btn {
+    display: none;
+  }
+
+}

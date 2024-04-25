@@ -1,0 +1,79 @@
+/* Popup.css */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.popup {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: auto;
+  max-width: 80%;
+  animation: fadeIn 0.3s;
+}
+
+.popup .popup-message {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1f4444;
+}
+
+.popup-close-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #1f4444;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style dla różnych typów popupów */
+.popup.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.popup.warning {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.popup.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.popup.info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .popup-overlay {
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+}

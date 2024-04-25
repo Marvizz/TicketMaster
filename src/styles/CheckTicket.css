@@ -1,0 +1,129 @@
+.check-ticket-admin-panel {
+  display: flex;
+  min-height: 100vh;
+  background-color: #e6f0f0;
+  position: relative;
+}
+
+.check-ticket-main-content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+  flex-grow: 1;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.check-ticket-content-wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+
+.check-ticket-qr-scanner-container {
+  margin-bottom: 30px;
+}
+
+.check-ticket-scanned-groups-container {
+  width: 100%;
+}
+
+.check-ticket-group-container {
+  background-color: #fff;
+  color: #1f4444;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.check-ticket-group-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.check-ticket-group-container p {
+  margin-bottom: 10px;
+}
+
+.check-ticket-scanned-tickets-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.check-ticket-scanned-ticket-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.check-ticket-ticket-qr-code {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.check-ticket-confirm-ticket-btn {
+  background-color: #1f4444;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .check-ticket-main-content {
+    margin-left: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.check-ticket-hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+}
+
+.check-ticket-hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #1f4444;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.check-ticket-hamburger-line.open {
+  background-color: #fff;
+}
+
+.check-ticket-hamburger-btn.open .check-ticket-hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.check-ticket-hamburger-btn.open .check-ticket-hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.check-ticket-hamburger-btn.open .check-ticket-hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (min-width: 769px) {
+  .check-ticket-hamburger-btn {
+    display: none;
+  }
+}

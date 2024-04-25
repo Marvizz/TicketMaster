@@ -1,0 +1,161 @@
+.assignticket-main-content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  overflow: auto;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e6f0f0;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .assignticket-main-content {
+    margin-left: 0;
+  }
+}
+
+.assignticket-main-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1f4444;
+}
+
+.assignticket-main-content #qr-reader {
+  margin-bottom: 20px;
+}
+
+.assignticket-main-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #1f4444;
+}
+
+.assignticket-main-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.assignticket-main-content li {
+    margin-bottom: 5px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+  }
+
+.assignticket-main-content form {
+  display: grid;
+  gap: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.assignticket-main-content .assignticket-remove-button {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.assignticket-main-content .assignticket-submit-button {
+  background-color: #1f4444;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.assignticket-main-content input[type="text"],
+.assignticket-main-content input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.assignticket-main-content input[type="checkbox"],
+.assignticket-main-content input[type="radio"] {
+  margin-right: 10px;
+}
+
+.assignticket-main-content .popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.assignticket-main-content .popup-content p {
+  margin-bottom: 20px;
+}
+
+.assignticket-main-content .popup-content button {
+  background-color: #1f4444;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.assignticket-hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+}
+
+.assignticket-hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #1f4444;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.assignticket-hamburger-line.open {
+  background-color: #fff;
+}
+
+.assignticket-hamburger-btn.open .assignticket-hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.assignticket-hamburger-btn.open .assignticket-hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.assignticket-hamburger-btn.open .assignticket-hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (min-width: 769px) {
+  .assignticket-hamburger-btn {
+    display: none;
+  }
+}

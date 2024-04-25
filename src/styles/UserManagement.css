@@ -1,0 +1,105 @@
+.user-management-container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-management-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #1f4444;
+  }
+  
+  .user-management-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    display: grid;
+    gap: 20px;
+  }
+  
+  .user-management-container li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #1f4444;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .user-management-container button {
+    padding: 8px 16px;
+    background-color: #1f4444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .user-management-container button:hover {
+    background-color: #123131;
+  }
+  
+  .user-management-container h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .user-management-container form {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .user-management-container .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .user-management-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1f4444;
+  }
+  
+  .user-management-container .input-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .user-management-container .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #1f4444;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #1f4444;
+    box-sizing: border-box;
+  }
+  
+  .user-management-container .form-group input.invalid {
+    border-color: #ff0000;
+  }
+  
+  .user-management-container .empty-message {
+    display: block;
+    margin-top: 5px;
+    color: #888;
+    font-size: 14px;
+  }
+  
+  .user-management-container .error-message {
+    display: block;
+    margin-top: 5px;
+    color: #ff0000;
+    font-size: 14px;
+  }
+  
+  .user-management-container .success-message {
+    color: green;
+    margin-top: 10px;
+  }
